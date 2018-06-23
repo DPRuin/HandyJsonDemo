@@ -1,0 +1,93 @@
+{
+	"version": 1,
+	"animations": [{
+			"name": "idle",
+			"version": 1,
+			"soundUrl": "https://newstest.cgtn.com/resource/ar/asset/restingstate_audioonly.mp3",
+            "imageUrl": "https://newstest.cgtn.com/resource/ar/asset/idle.png",
+            "modelsDownloadUrl": "https://newstest.cgtn.com/resource/ar/asset/idle.zip",
+			"models": [{
+					"modelFileName": "resting_panda",
+					"isOnlyAnimation": 0,
+
+				},
+               {
+               "modelFileName": "resting_shadow",
+               "isDelete": 0,
+               }
+			]
+		},
+		{
+			"name": "moonwalk",
+			"version": 1,
+			"soundUrl": "https://newstest.cgtn.com/resource/ar/asset/moonwalk_audioonly.mp3",
+			"models": [{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/moonwalk_panda.zip",
+					"modelFoler": "moonwalk_panda"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/moonwalk_glasses.zip",
+					"modelFoler": "moonwalk_glasses"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/moonwalk_shadow.zip",
+					"modelFoler": "moonwalk_shadow"
+				}
+			]
+		},
+		{
+			"name": "tshirt",
+			"version": 1,
+			"soundUrl": "https://newstest.cgtn.com/resource/ar/asset/tshirt_audioonly.mp3",
+			"models": [{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/tshirt_panda.zip",
+					"modelFoler": "tshirt_panda"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/tshirt.zip",
+					"modelFoler": "tshirt"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/tshirt_shadow.zip",
+					"modelFoler": "tshirt_shadow"
+				}
+			]
+		},
+		{
+			"name": "cheer",
+			"version": 1,
+			"soundUrl": "https://newstest.cgtn.com/resource/ar/asset/cheering_audioonly.mp3",
+			"models": [{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/cheers_panda.zip",
+					"modelFoler": "cheers_panda"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/cheers_dust.zip",
+					"modelFoler": "cheers_dust"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/cheers_shadow.zip",
+					"modelFoler": "cheers_shadow"
+				}
+			]
+		},
+		{
+			"name": "hearts",
+			"version": 1,
+			"soundUrl": "https://newstest.cgtn.com/resource/ar/asset/hearts_audioonly.mp3",
+			"models": [{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/hearts_panda.zip",
+					"modelFoler": "hearts_panda"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/hearts.zip",
+					"modelFoler": "hearts"
+				},
+				{
+					"modelUrl": "https://newstest.cgtn.com/resource/ar/asset/hearts_shadow.zip",
+					"modelFoler": "hearts_shadow"
+				}
+			]
+		}
+	]
+}

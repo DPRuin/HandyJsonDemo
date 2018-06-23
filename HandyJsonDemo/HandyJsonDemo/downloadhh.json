@@ -1,0 +1,39 @@
+ [
+  {
+  "animationGroupName" : "panda",
+  "version" : 1,
+  "animationModels" : [
+                       {
+                       "name" : "moonwalk",
+                       "version" : 1,
+                       "soundUrl" : "https://newstest.cgtn.com/resource/ar/asset/moonwalk_audioonly.mp3",
+                       "imageUrl" : "https://newstest.cgtn.com/resource/ar/asset/moonwalk.png",
+                       "artModels" : [
+                                      {
+                                      "modelFileName" : "cheers_panda"
+                                      },
+                                      {
+                                      "modelFileName" : "cheers_dust"
+                                      },
+                                      {
+                                      "modelFileName" : "cheers_shadow"
+                                      }
+                                      ],
+                       "modelsDownloadUrl" : "https://newstest.cgtn.com/resource/ar/asset/moonwalk.zip"
+                       },
+                       {
+                       "artModels" : [
+                                      {
+                                      "modelFileName" : "moonwalk_panda"
+                                      },
+                                      {
+                                      "modelFileName" : "moonwalk_glasses"
+                                      },
+                                      {
+                                      "modelFileName" : "moonwalk_shadow"
+                                      }
+                                      ]
+                       }
+                       ]
+  }
+  ]

@@ -1,0 +1,6 @@
+framework module Pods_HandyJsonDemo {
+  umbrella header "Pods-HandyJsonDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
