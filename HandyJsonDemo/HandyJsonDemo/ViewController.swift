@@ -9,8 +9,10 @@
 import UIKit
 import HandyJSON
 
-struct ArtModel: HandyJSON {
+struct Sub3DModel: HandyJSON {
     var modelFileName: String?
+    var animationFileName: String?
+    var animationRootNode: String?
 }
 
 class AnimationModel: HandyJSON {
@@ -19,7 +21,7 @@ class AnimationModel: HandyJSON {
     var soundUrl: String?
     var imageUrl: String?
     var modelsDownloadUrl: String?
-    var artModels: [ArtModel]?
+    var artModels: [Sub3DModel]?
     
     required init() {}
 }
@@ -63,22 +65,25 @@ class ViewController: UIViewController {
         animationCheer.imageUrl = "https://newstest.cgtn.com/resource/ar/asset/cheer.png"
         animationCheer.modelsDownloadUrl = "https://newstest.cgtn.com/resource/ar/asset/cheers_panda.zip"
         
-        let cheers_panda = ArtModel(modelFileName: "cheers_panda")
-        let cheers_dust = ArtModel(modelFileName: "cheers_dust")
-        let cheers_shadow = ArtModel(modelFileName: "cheers_shadow")
+        let cheers_panda = Sub3DModel(modelFileName: "cheers_panda", animationFileName: "cheers_panda_idle", animationRootNode: "Max_rootNode")
+        
+        let cheers_dust = Sub3DModel(modelFileName: "cheers_dust", animationFileName: nil, animationRootNode: nil)
+        
+        let cheers_shadow = Sub3DModel(modelFileName: "cheers_shadow", animationFileName: nil, animationRootNode: nil)
+        
         animationCheer.artModels = [cheers_panda, cheers_dust, cheers_shadow]
         
         // moonwalk动画
         let animationMoonwalk =  AnimationModel()
-        animationCheer.name = "moonwalk"
-        animationCheer.version = 1
-        animationCheer.soundUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk_audioonly.mp3"
-        animationCheer.imageUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk.png"
-        animationCheer.modelsDownloadUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk.zip"
+        animationMoonwalk.name = "moonwalk"
+        animationMoonwalk.version = 1
+        animationMoonwalk.soundUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk_audioonly.mp3"
+        animationMoonwalk.imageUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk.png"
+        animationMoonwalk.modelsDownloadUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk.zip"
         
-        let moonwalk_panda = ArtModel(modelFileName: "moonwalk_panda")
-        let moonwalk_glasses = ArtModel(modelFileName: "moonwalk_glasses")
-        let moonwalk_shadow = ArtModel(modelFileName: "moonwalk_shadow")
+        let moonwalk_panda = Sub3DModel(modelFileName: nil, animationFileName: "moonwalk_panda", animationRootNode: "Max_rootNode")
+        let moonwalk_glasses = Sub3DModel(modelFileName: "moonwalk_glasses", animationFileName: nil, animationRootNode: nil)
+        let moonwalk_shadow = Sub3DModel(modelFileName: "moonwalk_shadow", animationFileName: nil, animationRootNode: nil)
         
         animationMoonwalk.artModels = [moonwalk_panda, moonwalk_glasses, moonwalk_shadow]
         
@@ -118,7 +123,7 @@ class ViewController: UIViewController {
                 print(animationGroups.count)
                 print(animationGroups[0]!.toJSON()!)
                 let anima = animationGroups[0]?.animationModels![0] as! AnimationModel
-                let art = anima.artModels![0] as! ArtModel
+                let art = anima.artModels![0] as! Sub3DModel
                 print("----\(art.modelFileName)")
             }
             
@@ -126,10 +131,6 @@ class ViewController: UIViewController {
             // handle error
             print("errorhhhhhh")
         }
-        
-
     }
-
-
 }
 
