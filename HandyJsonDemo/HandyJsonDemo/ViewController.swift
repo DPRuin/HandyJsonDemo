@@ -13,6 +13,7 @@ struct Sub3DModel: HandyJSON {
     var modelFileName: String?
     var animationFileName: String?
     var animationRootNode: String?
+    var isMainObject: Bool?
 }
 
 class AnimationModel: HandyJSON {
@@ -65,11 +66,13 @@ class ViewController: UIViewController {
         animationCheer.imageUrl = "https://newstest.cgtn.com/resource/ar/asset/cheer.png"
         animationCheer.modelsDownloadUrl = "https://newstest.cgtn.com/resource/ar/asset/cheers_panda.zip"
         
-        let cheers_panda = Sub3DModel(modelFileName: "cheers_panda", animationFileName: "cheers_panda_idle", animationRootNode: "Max_rootNode")
+        // let cheers_panda = Sub3DModel(modelFileName: "cheers_panda", animationFileName: "cheers_panda_idle", animationRootNode: "Max_rootNode")
         
-        let cheers_dust = Sub3DModel(modelFileName: "cheers_dust", animationFileName: nil, animationRootNode: nil)
+        let cheers_panda = Sub3DModel(modelFileName: "cheers_panda", animationFileName: "cheers_panda_idle", animationRootNode: "panda", isMainObject: true)
         
-        let cheers_shadow = Sub3DModel(modelFileName: "cheers_shadow", animationFileName: nil, animationRootNode: nil)
+        let cheers_dust = Sub3DModel(modelFileName: "cheers_dust", animationFileName: "cheers_dust", animationRootNode: "dust", isMainObject: false)
+        
+        let cheers_shadow = Sub3DModel(modelFileName: "cheers_shadow", animationFileName: "cheers_shadow", animationRootNode: "shadow_jnt", isMainObject: false)
         
         animationCheer.artModels = [cheers_panda, cheers_dust, cheers_shadow]
         
@@ -81,9 +84,11 @@ class ViewController: UIViewController {
         animationMoonwalk.imageUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk.png"
         animationMoonwalk.modelsDownloadUrl = "https://newstest.cgtn.com/resource/ar/asset/moonwalk.zip"
         
-        let moonwalk_panda = Sub3DModel(modelFileName: nil, animationFileName: "moonwalk_panda", animationRootNode: "Max_rootNode")
-        let moonwalk_glasses = Sub3DModel(modelFileName: "moonwalk_glasses", animationFileName: nil, animationRootNode: nil)
-        let moonwalk_shadow = Sub3DModel(modelFileName: "moonwalk_shadow", animationFileName: nil, animationRootNode: nil)
+        // let moonwalk_panda = Sub3DModel(modelFileName: nil, animationFileName: "moonwalk_panda", animationRootNode: "Max_rootNode")
+        let moonwalk_panda = Sub3DModel(modelFileName: nil, animationFileName: "moonwalk_panda", animationRootNode: "panda", isMainObject: false)
+        
+        let moonwalk_glasses = Sub3DModel(modelFileName: "moonwalk_glasses", animationFileName: "moonwalk_glasses", animationRootNode: "glasses", isMainObject: false)
+        let moonwalk_shadow = Sub3DModel(modelFileName: "moonwalk_shadow", animationFileName: "moonwalk_shadow", animationRootNode: "shadow_jnt", isMainObject: false)
         
         animationMoonwalk.artModels = [moonwalk_panda, moonwalk_glasses, moonwalk_shadow]
         
