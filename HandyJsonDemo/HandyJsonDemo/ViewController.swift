@@ -20,14 +20,13 @@ class AnimationModel: HandyJSON {
     var name: String?
     var version: Int?
     var soundUrl: String?
-    var soundMd5: String?
-    
     var imageUrl: String?
     var modelsDownloadUrl: String?
+    var artModels: [Sub3DModel]?
+    
+    var soundMd5: String?
     var modelsZipMd5: String?
     var modelsFilesMd5: Dictionary<String, String>?
-    
-    var artModels: [Sub3DModel]?
     
     required init() {}
 }
